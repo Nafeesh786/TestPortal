@@ -1,0 +1,57 @@
+<html>
+ <head>
+     <title>Registration</title>
+	 <link rel="stylesheet" href="new_css.css">
+     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+	 <script src="cities.js"></script>
+ </head>
+ <body>
+  <h1>Registration</h1>
+  <form action="save" method="POST">
+    <fieldset>
+	<legend><span class="section">1</span>Basic Info</legend>
+    First Name:<input type="text" name="First Name" value="" required>
+	Last Name:<input type="text" name="Last Name" value="">
+	Father's Name:<input type="text" name="Fathers Name" value="" required >
+	Email-id:<input type="email" name="email" value="" required>
+	Mobile Number:<input type="text" name="Mobile Number" value="" required>
+	DOB:<input type="date" name="dob" required>
+	Age:<input type="number" name="age" value="">
+	
+	<label for="state">State:</label>
+	<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+    <select id ="state" class="form-control" required></select>
+    <script language="javascript">print_state("sts");</script>
+	
+	Full Address:<textarea name="address"></textarea>
+	Gender:&nbsp &nbsp <input type="radio" name="gender" value="Male">Male &nbsp  <input type="radio" name="gender" value="Female">Female
+	</fieldset>
+	
+	<fieldset>
+	<legend><span class="section">2</span>Academic Info</legend>
+	<label for="college"> College Name:</label>
+	<select name="college">
+	<option value="IET BU Jhansi">IET BU Jhansi</option>
+	<option value="IIT kanpur">IIT kanpur</option>
+	<option value="IIIT Allahabad">IIIT Allahabad</option>
+	<option value="Anand Engineering College">Anand Engineering College</option>
+	</select>
+	
+	<label for="course">Course:</label>
+	<select onchange="print_subject('course', this.selectedIndex);" id="stss" name ="sttt" class="form-control" required></select>
+    <select id ="course" name="course" class="form-control" required></select>
+    <script language="javascript">print_course("stss");</script>
+	
+	<label for="year">Year:</label>
+	<select name="year">
+	<option value="first">1st</option>
+	<option value="second">2nd</option>
+	<option value="third">3rd</option>
+	<option value="fourth">4th</option>
+	</select>
+	</fieldset>
+	<button type="submit" class="btn">Register</button>
+	
+ </form>
+ </body>
+ </html>

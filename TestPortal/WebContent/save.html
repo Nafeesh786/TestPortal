@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Questions </title>
+	<link rel="stylesheet" href="save_css.css">
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+    <script src="cities.js"></script>
+</head>
+<body>
+    <h1>Add Question</h1>
+	<h2>Select Subject</h2>
+    <label for="course">Course:</label>
+	<select onchange="print_subject('course', this.selectedIndex);" id="stss" name ="sttt" class="form-control" required></select>
+    <select id ="course" class="form-control" required></select>
+    <script language="javascript">print_course("stss");</script>
+    <form action="" method="POST">
+	  <table>
+	    <tr>
+		  <td>
+		   Question:<textarea></textarea>
+		  </td>
+		</tr>
+		<tr>
+		  <td>1st option:<input type="text" name="opta"></td>
+		  <td>2nd option:<input type="text" name="optb"></td>
+		  <td>3rd option:<input type="text" name="optc"></td>
+		  <td>4th option:<input type="text" name="optd"></td>	
+		</tr>
+	   </table>
+	   <center><button type="submit">ADD</button></center>
+	</form>
+	<h1>View Questions</h1>
+	<form action="" method="POST">
+	  <center><button type="submit">PRESS HERE</button></center>
+	</form>
+	
+	
+</body>
+</html>

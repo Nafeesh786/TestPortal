@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>TestServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>detail</servlet-name>
+    <servlet-class>com.TestServletRegistration.SaveDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>detail</servlet-name>
+    <url-pattern>/save</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>detailTeacher</servlet-name>
+    <servlet-class>com.TestServletTeacherRegistration.SaveTeacherDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>detailTeacher</servlet-name>
+    <url-pattern>/saveTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StuLog</servlet-name>
+    <servlet-class>com.TestServletStudentLogin.StudentLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StuLog</servlet-name>
+    <url-pattern>/studentLog</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>TeacherLog</servlet-name>
+    <servlet-class>com.TestServletTeacherLogin.TeacherLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TeacherLog</servlet-name>
+    <url-pattern>/teacherLog</url-pattern>
+  </servlet-mapping>
+</web-app>

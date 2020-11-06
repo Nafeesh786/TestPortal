@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Teacher Registration</title>
+<link rel="stylesheet" href="new_css.css">
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+<script src="cities.js"></script>
+</head>
+<body>
+  <h1>Registration</h1>
+  <form action="saveTeacher" method="POST">
+    <fieldset>
+	<legend><span class="section">1</span>Contact Info</legend>
+    Name:<input type="text" name="First Name" value="" required>
+	Email-id:<input type="email" name="email" value="" required>
+	Mobile Number:<input type="text" name="Mobile Number" value="" required>
+	Gender:&nbsp &nbsp <input type="radio" name="gender" value="Male">Male &nbsp  <input type="radio" name="gender" value="Female">Female
+	</fieldset>
+	
+	<fieldset>
+	<legend><span class="section">2</span>Teaching Info</legend>
+	<label for="college"> College Name:</label>
+	<select name="college">
+	<option value="0">IET BU Jhansi</option>
+	<option value="1">IIT kanpur</option>
+	<option value="2">IIIT Allahabad</option>
+	<option value="3">Aditya College of Law</option>
+	<option value="4">Anand Engineering College</option>
+	</select>
+	
+	<label for="course">Course:</label>
+	<select onchange="print_subject('course', this.selectedIndex);" id="stss" name ="sttt" class="form-control" required></select>
+    <select id ="course" name="subject" class="form-control" required></select>
+    <script language="javascript">print_course("stss");</script>
+	
+	</select>
+	</fieldset>
+	
+	<button type="submit" class="btn">Register</button>
+	
+ </form>
+</body>
+</html>
